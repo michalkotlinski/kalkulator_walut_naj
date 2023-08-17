@@ -41,7 +41,7 @@
     const currency = currencyElement.value;
 
     const rate = calculateRate(currency);
-    const result = amount * rate;
+    const result = amount / rate;
 
     updateResultText(result, currency, rate);
   };
