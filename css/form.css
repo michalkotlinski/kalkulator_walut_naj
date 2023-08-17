@@ -45,9 +45,11 @@
 }
 
 .form__paragraph--course {
+    display: block;
     color: cadetblue;
     background-color: white;
-    margin-left: 10px;
+    margin: auto;
+    text-align: center;
 }
 
 .form__paragraph--centered {
