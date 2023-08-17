@@ -3,7 +3,7 @@
     border-radius: 10px;
     padding: 40px;
     margin: 20px 0;
-    background-color: white;
+    background-color: transparent;
     box-shadow: 0 0 30px black;
 }
 
@@ -46,11 +46,13 @@
 
 .form__paragraph--course {
     color: cadetblue;
+    background-color: white;
     margin-left: 10px;
 }
 
 .form__paragraph--centered {
     color: cadetblue;
+    background-color: white;
     padding: 10px;
     max-width: fit-content;
     margin: 10px auto;
