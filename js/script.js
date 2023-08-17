@@ -1,96 +1,55 @@
 {
-  const result = document.querySelector(".js-result");
+  const calculateRate = (currency) => {
+    const rateEUR = 4.43;
+    const rateUSD = 4.05;
+    const rateGBP = 5.15;
+    const rateCHF = 4.62;
+    const rateCNY = 0.56;
 
-  const currencyOutputElement = document.querySelector(".js-currency-output");
-
-  const showResult = (currencyOutput) => {
-    result.innerText =
-      "Wynik: " +
-      calculateResult(currencyOutputElement.value).toFixed(2) +
-      " " +
-      currencyOutput;
-  };
-
-  const calculateResult = (currencyOutput) => {
-    let exchangeRate;
-
-    const amountElement = document.querySelector(".js-amount");
-
-    const currencyInputElement = document.querySelector(".js-currency-input");
-
-    switch (currencyInputElement.value) {
-      case "PLN":
-        switch (currencyOutput) {
-          case "PLN":
-            exchangeRate = 1;
-
-            return +amountElement.value * exchangeRate;
-
-          case "USD":
-            exchangeRate = 0.25;
-
-            return +amountElement.value * exchangeRate;
-
-          case "EUR":
-            exchangeRate = 0.22;
-
-            return +amountElement.value * exchangeRate;
-        }
+    switch (currency) {
+      case "EUR":
+        return rateEUR;
 
       case "USD":
-        switch (currencyOutput) {
-          case "PLN":
-            exchangeRate = 4.01;
+        return rateUSD;
 
-            return +amountElement.value * exchangeRate;
+      case "GBP":
+        return rateGBP;
 
-          case "USD":
-            exchangeRate = 1;
+      case "CHF":
+        return rateCHF;
 
-            return +amountElement.value * exchangeRate;
-
-          case "EUR":
-            exchangeRate = 0.9;
-
-            return +amountElement.value * exchangeRate;
-        }
-
-      case "EUR":
-        switch (currencyOutput) {
-          case "PLN":
-            exchangeRate = 4.45;
-
-            return +amountElement.value * exchangeRate;
-
-          case "USD":
-            exchangeRate = 1.11;
-
-            return +amountElement.value * exchangeRate;
-
-          case "EUR":
-            exchangeRate = 1;
-
-            return +amountElement.value * exchangeRate;
-        }
+      case "CNY":
+        return rateCNY;
     }
   };
 
-  const onFormInput = () => (result.innerText = "Wynik:");
+  const updateResultText = (result, currency, rate) => {
+    const courseElement = document.querySelector(".js-course");
+    const resultElement = document.querySelector(".js-result");
+    courseElement.innerText = `1 ${currency} = ${rate} PLN`;
+    resultElement.innerHTML = ` <strong>${result.toFixed(2)}</strong>`;
+  };
 
   const onFormSubmit = (event) => {
     event.preventDefault();
 
-    calculateResult(currencyOutputElement.value);
+    const amountElement = document.querySelector(".js-amount");
+    const currencyElement = document.querySelector(".js-currency");
 
-    showResult(currencyOutputElement.value);
+    const amount = +amountElement.value;
+    const currency = currencyElement.value;
+
+    const rate = calculateRate(currency);
+    const result = amount * rate;
+
+    updateResultText(result, currency, rate);
   };
 
   const init = () => {
-    const form = document.querySelector(".js-form");
+    const formElement = document.querySelector(".js-form");
 
-    form.addEventListener("input", onFormInput);
-
-    form.addEventListener("submit", onFormSubmit);
+    formElement.addEventListener("submit", onFormSubmit);
   };
 
   init();
