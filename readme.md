@@ -5,7 +5,7 @@
 ## Demo:
 https://michalkotlinski.github.io/kalkulator_walut_naj/
 
-## Tecnologies:
+## Technologies:
 - CSS BEM
 - HTML
 - JavaScript
