@@ -1,7 +1,5 @@
 # Currency converter
 
-![Michał](images\share.png)
-
 ## Demo:
 https://michalkotlinski.github.io/kalkulator_walut_naj/
 
