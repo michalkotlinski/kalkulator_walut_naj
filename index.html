@@ -26,6 +26,7 @@
                 <legend class="form__legend">Kalkulator walutowy</legend>
                 <p>
                     <label>
+                        <p class="form__paragraph--fontSmall">Wymagane pola oznaczone są *</p>
                         <span class="form__labelText">
                             Wpisz kwotę PLN*:
                         </span>
@@ -46,12 +47,12 @@
                         </select>
                     </label>
                 </p>
-                <p>Aktualny kurs:<br><span class="form__paragraph--course js-course"></span>
+                <p class="form__exchangeCourse">Aktualny kurs:<br><span class="form__paragraph--course js-course"></span>
                 </p>
                 <button class="form__button" type="submit">Przelicz</button>
-                <p class="form__paragraph--centered">Otrzymasz:<span class="js-result"></span></p>
+                <p class="form__paragraph--centered">
+                    Otrzymasz: <span class="js-result"></span><span class="currency"></span>
                 </p>
-                <p class="form__paragraph--fontSmall">Wymagane pola oznaczone są *</p>
             </fieldset>
         </form>
     </div>

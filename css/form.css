@@ -3,21 +3,27 @@
     border-radius: 10px;
     padding: 40px;
     margin: 20px 0;
-    background-color: transparent;
+    background-color: rgba(71, 92, 76, 0.25);
     box-shadow: 0 0 30px black;
 }
 
 .form__legend {
+    display: inline-block;
+    text-align: center;
+    max-width: 200px;
     background-color: rgb(113, 165, 149);
     border-radius: 10px;
-    padding: 10px;
+    padding: 5px;
     color: white;
     text-transform: uppercase;
 }
 
 .form__labelText {
-    width: 100%;
-    max-width: 200px;
+    background-color: rgb(210, 236, 228);
+    max-width: 100%;
+    padding: 5px;
+    text-align: center;
+    font-weight: 600;
     display: inline-block;
     margin-right: 5px;
     text-transform: uppercase;
@@ -28,7 +34,19 @@
     border-radius: 5px;
     padding: 6px;
     width: 100%;
-    max-width: 200px;
+    max-width: 180px;
+    text-align: center;
+}
+
+.form__exchangeCourse {
+    display: inline-block;
+    background-color: rgb(210, 236, 228);
+    border-radius: 5px;
+    margin-left: 80px;
+    max-width: 100%;
+    padding: 5px;
+    text-align: center;
+    font-weight: 700;
 }
 
 .form__button {
@@ -48,24 +66,29 @@
 
 .form__paragraph--course {
     display: block;
-    color: cadetblue;
+    color: rgb(46, 54, 54);
     background-color: white;
+    border-radius: 5px;
     margin: auto;
     text-align: center;
 }
 
 .form__paragraph--centered {
-    color: cadetblue;
-    background-color: white;
+    color: rgb(13, 85, 11);
+    font-weight: 900;
+    background-color: rgb(228, 202, 147);
+    border-radius: 5px;
     padding: 10px;
     max-width: fit-content;
     margin: 10px auto;
 }
 
 .form__paragraph--fontSmall {
-    font-size: 14px;
-}
-
-.inline-block{
     display: inline-block;
+    margin-left: 80px;
+    background-color: rgb(221, 161, 161);
+    font-size: 9px;
+    font-style: italic;
+    padding: 2px;
+    
 }

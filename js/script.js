@@ -24,12 +24,24 @@
     }
   };
 
+  const currencySymbols = {
+    EUR: "€",
+    USD: "$",
+    GBP: "£",
+    CHF: "CHF",
+    CNY: "¥",
+  };
+
   const updateResultText = (result, currency, rate) => {
     const courseElement = document.querySelector(".js-course");
     const resultElement = document.querySelector(".js-result");
+    const currencyElement = document.querySelector(".currency");
+
     courseElement.innerText = `1 ${currency} = ${rate} PLN`;
-    resultElement.innerHTML = ` <strong>${result.toFixed(2)}</strong>`;
+    resultElement.innerHTML = `<strong>${result.toFixed(2)}</strong>`;
+    currencyElement.textContent = currencySymbols[currency];
   };
+
 
   const onFormSubmit = (event) => {
     event.preventDefault();
