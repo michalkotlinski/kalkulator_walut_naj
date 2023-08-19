@@ -52,7 +52,7 @@
 .form__button {
     background-color: cadetblue;
     color: white;
-    border: none;
+    border: 1px solid cadetblue;
     border-radius: 10px;
     padding: 10px 60px;
     display: block;
@@ -61,11 +61,15 @@
 
 .form__button:hover {
     background-color: hsl(182, 25%, 55%);
-    border: 1px solid cadetblue;
+    border: 1px solid rgb(58, 156, 95);
+    border-radius: 10px;
+    padding: 10px 60px;
+    display: block;
+    margin: 40px auto;
 }
 
 .form__paragraph--course {
-    display: block;
+    display: inline-block;
     color: rgb(46, 54, 54);
     background-color: white;
     border-radius: 5px;
